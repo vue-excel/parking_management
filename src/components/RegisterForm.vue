@@ -43,6 +43,62 @@
 </template>
 
 
+<script>
+    import { mapState } from 'vuex';
+
+    export default {
+        name: "RegisterForm",
+
+        data() {
+            return {
+                name: 'Николай',
+                email: 'disasterovich@mail.ru', //null,
+                password: 'zstebgtu', //null,
+                password2: 'zstebgtu', //null,
+
+                nameRules: [
+                    v => !!v || 'Name is required',
+                ],
+
+                passwordRules: [
+                    v => !!v || 'Password is required',
+                    //v => v.length <= 10 || 'Name must be less than 10 characters',
+                ],
+
+                emailRules: [
+                    v => !!v || 'E-mail is required',
+                    v => /.+@.+/.test(v) || 'E-mail must be valid',
+                ],
+
+                //TODO add captcha
+            }
+        },
+
+        computed: {
+            ...mapState({
+                errors: state => state.user.errors,
+                loading: state => state.user.loading,
+                user: state => state.user.item,
+            }),
+        },
+
+        methods: {
+            register() {
+
+                //TODO add client side validation
+
+                this.$store.dispatch({'type': 'registerUser',
+                    'name': this.name,
+                    'email': this.email,
+                    'password': this.password,
+                    'password2': this.password2,
+                })
+            }
+        }
+
+    }
+</script>
+
 
 <style scoped>
 
