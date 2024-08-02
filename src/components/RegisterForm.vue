@@ -42,7 +42,6 @@
     </div>
 </template>
 
-
 <script>
     import { mapState } from 'vuex';
 
@@ -98,7 +97,6 @@
 
     }
 </script>
-
 
 <style scoped>
 
