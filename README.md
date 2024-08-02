@@ -1,7 +1,5 @@
 # Simple frontend vue.js 2.x, vuex, vuetify, vue-router
 
-![Alt text](./public/Screenshot1.png?raw=true "Screenshot 1")
-
 
 ## Project setup
 ```
