@@ -2,14 +2,6 @@
 
 ![Alt text](./public/Screenshot1.png?raw=true "Screenshot 1")
 
-## Config paths
-
-Configure paths in store.js to backend server:
-```
-HOST: 'http://BACKEND_HOST_HERE/',
-API_URL: 'http://BACKEND_HOST_HERE/api/',
-```
-
 
 ## Project setup
 ```
